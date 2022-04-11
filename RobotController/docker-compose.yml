@@ -1,0 +1,35 @@
+version: '3.4'
+
+services:
+  robotcontroller.api:
+    image: ${DOCKER_REGISTRY-}robotcontrollerapi
+    build:
+      context: .
+      dockerfile: RobotController.Api/Dockerfile
+    depends_on:
+     - robotdb
+
+  robotdb:
+    image: postgres:13-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - 127.0.0.1:5432:5432/tcp
+    environment:
+      - POSTGRES_USER=majed
+      - POSTGRES_PASSWORD=majed
+      - POSTGRES_DB=robotDB
+
+  pgadmin:
+    image: dpage/pgadmin4:6
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "admin@admin.admin"
+      PGADMIN_DEFAULT_PASSWORD: "testpass"
+    volumes:
+      - ./pgadmin_data:/var/lib/pgadmin
+    ports:
+      - 127.0.0.1:1234:80
+
+
+volumes:
+  postgres_data:

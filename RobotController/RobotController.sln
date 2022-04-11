@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotController.Api", "RobotController.Api\RobotController.Api.csproj", "{4AAD36E4-EE68-49F4-B57E-4FBA36A5D22F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotController.Data", "RobotController.Data\RobotController.Data.csproj", "{345954F5-9AC3-4554-A437-B01EE99439F8}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CBD63948-F6C4-4E53-9AB0-7CCE91E42B81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotController.Simulator", "RobotController.Simulator\RobotController.Simulator.csproj", "{11056EC4-2242-4016-A35F-E434C0D0FC2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotController.Common", "RobotController.Common\RobotController.Common.csproj", "{E184098B-0FCC-4F2D-ACEA-5A0AF084B0EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotController.Tests", "RobotController.Tests\RobotController.Tests.csproj", "{36687611-5E6B-40D4-9A07-22AEB0872056}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AAD36E4-EE68-49F4-B57E-4FBA36A5D22F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AAD36E4-EE68-49F4-B57E-4FBA36A5D22F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AAD36E4-EE68-49F4-B57E-4FBA36A5D22F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AAD36E4-EE68-49F4-B57E-4FBA36A5D22F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{345954F5-9AC3-4554-A437-B01EE99439F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{345954F5-9AC3-4554-A437-B01EE99439F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{345954F5-9AC3-4554-A437-B01EE99439F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{345954F5-9AC3-4554-A437-B01EE99439F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBD63948-F6C4-4E53-9AB0-7CCE91E42B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBD63948-F6C4-4E53-9AB0-7CCE91E42B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBD63948-F6C4-4E53-9AB0-7CCE91E42B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBD63948-F6C4-4E53-9AB0-7CCE91E42B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11056EC4-2242-4016-A35F-E434C0D0FC2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11056EC4-2242-4016-A35F-E434C0D0FC2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11056EC4-2242-4016-A35F-E434C0D0FC2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11056EC4-2242-4016-A35F-E434C0D0FC2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E184098B-0FCC-4F2D-ACEA-5A0AF084B0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E184098B-0FCC-4F2D-ACEA-5A0AF084B0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E184098B-0FCC-4F2D-ACEA-5A0AF084B0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E184098B-0FCC-4F2D-ACEA-5A0AF084B0EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36687611-5E6B-40D4-9A07-22AEB0872056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36687611-5E6B-40D4-9A07-22AEB0872056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36687611-5E6B-40D4-9A07-22AEB0872056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36687611-5E6B-40D4-9A07-22AEB0872056}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F96DD6A0-2C69-428E-8CBB-496FABD1EAA8}
+	EndGlobalSection
+EndGlobal
