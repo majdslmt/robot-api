@@ -14,6 +14,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<SystemDataContext>(
     o => o.UseNpgsql(builder.Configuration.GetConnectionString("RobotSystemDB"))
     );
+
+var host = Host.CreateDefaultBuilder();
+
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 builder.Services.AddScoped<IMovingService, MovingService>();
@@ -24,6 +27,14 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<SystemDataContext>();
+    context.Database.Migrate();
 }
 
 app.UseHttpsRedirection();
