@@ -5,16 +5,12 @@ namespace RobotController.Api.Helper
 {
     public class CommandFactory
     {
-        private const int MaxNumberSteps = 200;
-        private const int MinNumberSteps = 1;
 
-        private List<string> _inputStrings;
 
         internal readonly CommandString command;
 
         public CommandFactory()
         {
-            _inputStrings = new List<string>();
             command = new CommandString();
         }
         public CommandString CreateCommand(MovingCommandContract movingCommandContract, int maxNumberOfStep)
