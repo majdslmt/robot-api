@@ -71,7 +71,7 @@ namespace RobotController.Tests
             CommandString commandSet = commandFactory.CreateCommand(movingCommandContract, 100);
 
             //act
-            Robot robot = new Robot(commandSet, new SimpleReporter());
+            Robot robot = new Robot(commandSet, new CleaningReport());
 
             //assert
             robot.ExecuteCommands();
@@ -106,7 +106,7 @@ namespace RobotController.Tests
             CommandString commandSet = commandFactory.CreateCommand(movingCommandContract, 300);
 
             //act
-            Robot robot = new Robot(commandSet, new SimpleReporter());
+            Robot robot = new Robot(commandSet, new CleaningReport());
 
             //assert
             robot.ExecuteCommands();

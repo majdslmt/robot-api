@@ -4,6 +4,6 @@ namespace RobotController.Api.Services
 {
     public interface IMovingService
     {
-        Task<bool> Move(MovingCommandContract movingContract);
+        Task<string> Move(MovingCommandContract movingContract);
     }
 }

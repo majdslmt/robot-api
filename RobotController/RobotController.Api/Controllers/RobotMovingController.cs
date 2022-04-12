@@ -22,9 +22,9 @@ namespace RobotController.Api.Controllers
         public async Task<IActionResult> SendRequest(MovingCommandContract movingCommandContract)
         {
 
-            var x = await movingService.Move(movingCommandContract);
+            var result = await movingService.Move(movingCommandContract);
 
-            return Ok();
+            return Ok(result);
         }
     }
 }

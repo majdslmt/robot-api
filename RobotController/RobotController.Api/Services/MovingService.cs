@@ -14,19 +14,28 @@ namespace RobotController.Api.Services
         public MovingService(SystemDataContext context) {
             this.context = context;
         }
-        public async Task<bool> Move(MovingCommandContract movingContract)
+        public async Task<string> Move(MovingCommandContract movingContract)
         {
-            var  maxNumberOfStep = await CheckOfficeArea();
-            CommandFactory commandFactory = new CommandFactory();
-            var command = commandFactory.CreateCommand(movingContract, maxNumberOfStep);
-            SimpleReporter reporter = new SimpleReporter();
-            var startDate = DateTime.Now;
-            Robot robot = new Robot(command, reporter, new Location(0, 0), new Location(7, 7));
-            robot.ExecuteCommands();
-            var duration = DateTime.Now - startDate;
+            try
+            {
+                var maxNumberOfStep = await CheckOfficeArea();
+                CommandFactory commandFactory = new CommandFactory();
+                var command = commandFactory.CreateCommand(movingContract, maxNumberOfStep);
+                CleaningReport reporter = new CleaningReport();
+                var startDate = DateTime.Now;
+                Robot robot = new Robot(command, reporter, new Location(0, 0), new Location(7, 7));
+                robot.ExecuteCommands();
+                var duration = DateTime.Now - startDate;
 
-            await SaveRessultAsync(movingContract.Commmands.Count(), robot.PrintReport(), duration);
-            return  true;
+                await SaveRessultAsync(movingContract.Commmands.Count(), robot.PrintReport(), duration);
+                return "Cleaning Report " + robot.PrintReport();
+
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message;
+            }
         }
 
 

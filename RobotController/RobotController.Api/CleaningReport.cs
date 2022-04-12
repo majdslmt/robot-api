@@ -3,11 +3,11 @@ using RobotController.Simulator;
 
 namespace RobotController.Api
 {
-    public class SimpleReporter : IReport
+    public class CleaningReport : IReport
     {
         private SortedSet<Location> _cleanedLocationStrings;
 
-        public SimpleReporter()
+        public CleaningReport()
         {
             _cleanedLocationStrings = new SortedSet<Location>();
         }
